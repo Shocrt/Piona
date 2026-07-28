@@ -13,7 +13,7 @@
   html, body {
     margin: 0;
     padding: 0;
-    background: #ddd;
+    background: #ddcaae;
     height: 100%;
   }
   .wrap {
@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
+    background: #ddcaae;
   }
   .letter-img {
     display: block;
@@ -35,11 +36,14 @@
   }
   @media print {
     body { background: none; }
-    .wrap { height: auto; display: block; }
+    .wrap { height: auto; display: block; background: none; }
     .letter-img { max-width: none; max-height: none; width: 1414px; height: auto; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <img class="letter-img" src="pio.png">
+  <img class="letter-img" src="pio.png" alt="Love letter para kay Piona">
+</div>
+</body>
+</html>
