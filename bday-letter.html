@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<title>Love Letter para kay Piona</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #e8ddc7;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #f3e9d7;
+    position: relative;
+    overflow: hidden;
+    padding: 26mm 22mm;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  }
+  /* subtle paper grain */
+  .page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px);
+    background-size: 3px 3px;
+    pointer-events: none;
+  }
+  .date {
+    position: absolute;
+    top: 14mm;
+    right: 18mm;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 14px;
+    color: #6b5d4a;
+    z-index: 2;
+  }
+  .salutation {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 40px;
+    color: #4a3f30;
+    margin: 20mm 0 12mm 0;
+    z-index: 2;
+    position: relative;
+  }
+  .body-text p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #4a3f30;
+    margin: 0 0 6mm 0;
+    z-index: 2;
+    position: relative;
+  }
+  .closing {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 32px;
+    color: #4a3f30;
+    margin-top: 16mm;
+    z-index: 2;
+    position: relative;
+  }
+  .closing .name {
+    margin-top: 2mm;
+  }
+
+  /* floating hearts */
+  .heart {
+    position: absolute;
+    color: #d9a394;
+    opacity: 0.55;
+  }
+  svg.heart-svg { display: block; }
+
+  /* confetti */
+  .confetti {
+    position: absolute;
+    border-radius: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- floating hearts scattered near edges, avoiding center text block -->
+  <svg class="heart" style="top:18mm; left:14mm; width:20px; height:20px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.1C.8 10 1.5 6.4 4.6 5.1c2-.85 4.1-.1 5.4 1.6.6-1.7 2.7-2.45 4.7-1.6 3.1 1.3 3.8 4.9 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+  <svg class="heart" style="top:12mm; right:30mm; width:14px; height:14px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.1C.8 10 1.5 6.4 4.6 5.1c2-.85 4.1-.1 5.4 1.6.6-1.7 2.7-2.45 4.7-1.6 3.1 1.3 3.8 4.9 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+  <svg class="heart" style="bottom:220mm; left:6mm; width:16px; height:16px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.1C.8 10 1.5 6.4 4.6 5.1c2-.85 4.1-.1 5.4 1.6.6-1.7 2.7-2.45 4.7-1.6 3.1 1.3 3.8 4.9 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+  <svg class="heart" style="bottom:60mm; right:10mm; width:22px; height:22px; opacity:0.4;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.1C.8 10 1.5 6.4 4.6 5.1c2-.85 4.1-.1 5.4 1.6.6-1.7 2.7-2.45 4.7-1.6 3.1 1.3 3.8 4.9 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+  <svg class="heart" style="bottom:30mm; left:20mm; width:12px; height:12px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.1C.8 10 1.5 6.4 4.6 5.1c2-.85 4.1-.1 5.4 1.6.6-1.7 2.7-2.45 4.7-1.6 3.1 1.3 3.8 4.9 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+  <svg class="heart" style="top:100mm; right:8mm; width:130px; height:130px; opacity:0.3; color:#e0ab97;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21s-6.7-4.35-9.3-8.1C.8 10 1.5 6.4 4.6 5.1c2-.85 4.1-.1 5.4 1.6.6-1.7 2.7-2.45 4.7-1.6 3.1 1.3 3.8 4.9 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+
+  <!-- confetti dots / stars / rects -->
+  <div class="confetti" style="top:20mm; left:40mm; width:4px; height:4px; background:#e0a58f;"></div>
+  <div class="confetti" style="top:16mm; left:60mm; width:6px; height:2px; background:#c9a86a; transform:rotate(30deg);"></div>
+  <div class="confetti" style="top:34mm; right:18mm; width:3px; height:3px; border-radius:50%; background:#d9a394;"></div>
+  <div class="confetti" style="bottom:250mm; left:30mm; width:5px; height:5px; border-radius:50%; background:#c9a86a;"></div>
+  <div class="confetti" style="bottom:210mm; right:40mm; width:6px; height:2px; background:#d9a394; transform:rotate(-20deg);"></div>
+  <div class="confetti" style="bottom:80mm; left:14mm; width:4px; height:4px; background:#e0a58f; transform:rotate(45deg);"></div>
+  <div class="confetti" style="bottom:50mm; right:24mm; width:3px; height:3px; border-radius:50%; background:#c9a86a;"></div>
+  <div class="confetti" style="bottom:22mm; left:50mm; width:5px; height:2px; background:#d9a394; transform:rotate(60deg);"></div>
+
+  <div class="date">Date: 07/28/2026</div>
+
+  <div class="salutation">My Dearest Piona,</div>
+
+  <div class="body-text">
+    <p>Happy Birthday po. It's your day to celebrate na. Ito munang letter at kaunting gifts ang mabibigay ko sa iyo. Wala muna tayong mga videos or masyadong magagarang creativity. Babawi ako pagkatapos ng OJT ko at sa mga susunod pang taon, promise po.</p>
+
+    <p>Panibagong taon mo na ulit. What is your wish ba, tutuparin natin. I hope you know na hindi na lang kita matatawag na malaking bagay sa buhay ko, it's far more greater than that na actions lang ang makakapagpatunay. I know naging mahirap rin sa iyo ang mga bagay sa last na taon so let's try to change it. I'm glad dahil nilakasan mo, I'm glad dahil hinayaan mo akong samahan ka sa bawat pagsubok mo.</p>
+
+    <p>I know I've been bad sometimes but still very thankful ako na hindi mo ako nile-let down but instead, nandiyan ka lang, you're letting me improve myself more para matutunan pa kita at isa 'yan sa mga gusto ko lang matutunan para maibigay ko sa iyo ang pagmamahal at buhay na gusto mo, to provide peace and happiness sa baby ko. 'Yan na siguro ang pinaka best na kaya kong i-gift sa iyo pagdating ng araw. I hope we continue to grow as lovers.</p>
+
+    <p>Let's celebrate your birthday just the two of us mamaya, like how we always do. Kahit sa pag-uwi ko galing work. I wanna spend my remaining time with you and then we'll continue after ng aking OJT.</p>
+
+    <p>I love you, babu.</p>
+  </div>
+
+  <div class="closing">
+    With all of my love,
+    <div class="name">Kurt</div>
+  </div>
+
+</div>
+</body>
+</html>
